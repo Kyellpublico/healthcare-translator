@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Translation</title>
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="container mt-4">
+    <h2 class="text-center">Healthcare Translation Web App</h2>
+
+    <div class="mb-3">
+        <label for="inputText" class="form-label">Enter Text:</label>
+        <textarea id="inputText" class="form-control" rows="3"></textarea>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <label for="sourceLang" class="form-label">Source Language:</label>
+            <select id="sourceLang" class="form-select">
+                <option value="auto" selected>Detect Language</option>
+                <option value="en">English</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+                <option value="de">German</option>
+                <option value="zh-cn">Chinese</option>
+                <option value="tl">Filipino</option>
+                <option value="ar">Arabic</option>
+                <option value="ru">Russian</option>
+                <option value="it">Italian</option>
+                <option value="pt">Portuguese</option>
+                <option value="ko">Korean</option>
+                <option value="ja">Japanese</option>
+                <option value="hi">Hindi</option>
+                <option value="tr">Turkish</option>
+            </select>
+        </div>
+
+        <div class="col-md-6">
+            <label for="targetLang" class="form-label">Target Language:</label>
+            <select id="targetLang" class="form-select">
+                <option value="en">English</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+                <option value="de">German</option>
+                <option value="zh-cn">Chinese</option>
+                <option value="tl">Filipino</option>
+                <option value="ar">Arabic</option>
+                <option value="ru">Russian</option>
+                <option value="it">Italian</option>
+                <option value="pt">Portuguese</option>
+                <option value="ko">Korean</option>
+                <option value="ja">Japanese</option>
+                <option value="hi">Hindi</option>
+                <option value="tr">Turkish</option>
+            </select>
+        </div>
+    </div>
+
+    <button class="btn btn-primary mt-3" onclick="translateText()">Translate</button>
+    <button class="btn btn-warning mt-3" onclick="startSpeechRecognition()">🎙 Speak</button>
+
+    <h4 class="mt-4">Translated Text:</h4>
+    <p id="translatedText" class="border p-2"></p>
+    <button class="btn btn-success mt-2" onclick="speakText()">🔊 Play Audio</button>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
